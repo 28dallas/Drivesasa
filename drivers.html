@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers - DriveSasa</title>
+    <link rel="stylesheet" href="drivers.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo2.png" alt="DriveSasa Logo">
+                <span class="logo-text">DRIVE<span class="sasa">LINK</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Services ▼</a>
+                    <div class="dropdown-content">
+                        <a href="drivers.html">Driver</a>
+                        <a href="#">Car Partner</a>
+                        <a href="#">Car Hire</a>
+                    </div>
+                </li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="sign-in">Sign In</button>
+                <button class="sign-up">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="drivers-main">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Your Direct Connection to Drivers Seeking Car Partnerships</h1>
+                </div>
+                <div class="hero-image">
+                    <div class="slideshow-container">
+                        <button class="nav-arrow prev" onclick="changeSlide(-1)">‹</button>
+                        
+                        <div class="driver-profile active" data-slide="0">
+                            <img src="img/Drivers/images (1).jpeg" alt="Driver" class="driver-photo">
+                            <div class="driver-card">
+                                <div class="driver-header">
+                                    <span class="driver-name">JOHN OKETCH</span>
+                                    <span class="verified-icon">✓</span>
+                                </div>
+                                <div class="rating">Rating: ⭐ 4.8</div>
+                                <div class="driver-details">
+                                    <div class="detail-item"><span class="label">Age:</span><span class="value">27</span></div>
+                                    <div class="detail-item"><span class="label">Experience:</span><span class="value">2Years</span></div>
+                                    <div class="detail-item"><span class="label">Driver Type:</span><span class="value">Online</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="driver-profile" data-slide="1">
+                            <img src="img/Drivers/images (2).jpeg" alt="Driver" class="driver-photo">
+                            <div class="driver-card">
+                                <div class="driver-header">
+                                    <span class="driver-name">MARY WANJIKU</span>
+                                    <span class="verified-icon">✓</span>
+                                </div>
+                                <div class="rating">Rating: ⭐ 4.6</div>
+                                <div class="driver-details">
+                                    <div class="detail-item"><span class="label">Age:</span><span class="value">32</span></div>
+                                    <div class="detail-item"><span class="label">Experience:</span><span class="value">5Years</span></div>
+                                    <div class="detail-item"><span class="label">Driver Type:</span><span class="value">Corporate</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="driver-profile" data-slide="2">
+                            <img src="img/Drivers/images (3).jpeg" alt="Driver" class="driver-photo">
+                            <div class="driver-card">
+                                <div class="driver-header">
+                                    <span class="driver-name">PETER MWANGI</span>
+                                    <span class="verified-icon">✓</span>
+                                </div>
+                                <div class="rating">Rating: ⭐ 4.9</div>
+                                <div class="driver-details">
+                                    <div class="detail-item"><span class="label">Age:</span><span class="value">29</span></div>
+                                    <div class="detail-item"><span class="label">Experience:</span><span class="value">3Years</span></div>
+                                    <div class="detail-item"><span class="label">Driver Type:</span><span class="value">Personal</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="driver-profile" data-slide="3">
+                            <img src="img/Drivers/images (4).jpeg" alt="Driver" class="driver-photo">
+                            <div class="driver-card">
+                                <div class="driver-header">
+                                    <span class="driver-name">GRACE AKINYI</span>
+                                    <span class="verified-icon">✓</span>
+                                </div>
+                                <div class="rating">Rating: ⭐ 4.7</div>
+                                <div class="driver-details">
+                                    <div class="detail-item"><span class="label">Age:</span><span class="value">25</span></div>
+                                    <div class="detail-item"><span class="label">Experience:</span><span class="value">1Year</span></div>
+                                    <div class="detail-item"><span class="label">Driver Type:</span><span class="value">Online</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="driver-profile" data-slide="4">
+                            <img src="img/Drivers/images (5).jpeg" alt="Driver" class="driver-photo">
+                            <div class="driver-card">
+                                <div class="driver-header">
+                                    <span class="driver-name">DAVID KIPROTICH</span>
+                                    <span class="verified-icon">✓</span>
+                                </div>
+                                <div class="rating">Rating: ⭐ 4.5</div>
+                                <div class="driver-details">
+                                    <div class="detail-item"><span class="label">Age:</span><span class="value">35</span></div>
+                                    <div class="detail-item"><span class="label">Experience:</span><span class="value">7Years</span></div>
+                                    <div class="detail-item"><span class="label">Driver Type:</span><span class="value">Corporate</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="nav-arrow next" onclick="changeSlide(1)">›</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-form">
+                <div class="dropdown">
+                    <select>
+                        <option>Driver Type</option>
+                        <option>Online</option>
+                        <option>Corporate</option>
+                        <option>Personal</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select>
+                        <option>Experience</option>
+                        <option>1+</option>
+                        <option>2+</option>
+                        <option>3+</option>
+                        <option>4+</option>
+                        <option>5+</option>
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <section class="drivers-list">
+            <h2>Drivers</h2>
+            <div class="drivers-grid">
+                <div class="driver-item">
+                    <img src="img/Drivers/images (1).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">JOHN OKETCH</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 27</p>
+                            <p>Experience: 2Years</p>
+                            <p>Driver Type: Online</p>
+                            <p>Contact: 0735 763</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.8 (230 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (2).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">MARY WANJIKU</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 32</p>
+                            <p>Experience: 5Years</p>
+                            <p>Driver Type: Corporate</p>
+                            <p>Contact: 0721 456</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.6 (189 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (3).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">PETER MWANGI</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 29</p>
+                            <p>Experience: 3Years</p>
+                            <p>Driver Type: Personal</p>
+                            <p>Contact: 0712 890</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.9 (312 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (4).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">GRACE AKINYI</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 25</p>
+                            <p>Experience: 1Year</p>
+                            <p>Driver Type: Online</p>
+                            <p>Contact: 0798 234</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.7 (156 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (5).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">DAVID KIPROTICH</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 35</p>
+                            <p>Experience: 7Years</p>
+                            <p>Driver Type: Corporate</p>
+                            <p>Contact: 0745 678</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.5 (278 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (6).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">SARAH MUTUA</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 28</p>
+                            <p>Experience: 4Years</p>
+                            <p>Driver Type: Personal</p>
+                            <p>Contact: 0756 123</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.8 (201 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (7).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">JAMES OTIENO</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 31</p>
+                            <p>Experience: 6Years</p>
+                            <p>Driver Type: Online</p>
+                            <p>Contact: 0734 567</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.6 (145 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (8).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">LUCY NJERI</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 26</p>
+                            <p>Experience: 2Years</p>
+                            <p>Driver Type: Corporate</p>
+                            <p>Contact: 0789 345</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.7 (167 reviews)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="drivers-grid page-2" style="display: none;">
+                <div class="driver-item">
+                    <img src="img/Drivers/images (9).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">MICHAEL KAMAU</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 33</p>
+                            <p>Experience: 8Years</p>
+                            <p>Driver Type: Corporate</p>
+                            <p>Contact: 0722 891</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.9 (345 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (10).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">ESTHER WAMBUI</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 24</p>
+                            <p>Experience: 1Year</p>
+                            <p>Driver Type: Online</p>
+                            <p>Contact: 0765 432</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.5 (98 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (11).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">ROBERT KIPCHOGE</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 30</p>
+                            <p>Experience: 5Years</p>
+                            <p>Driver Type: Personal</p>
+                            <p>Contact: 0743 567</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.7 (223 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (12).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">FAITH NYONG'O</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 27</p>
+                            <p>Experience: 3Years</p>
+                            <p>Driver Type: Online</p>
+                            <p>Contact: 0758 234</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.8 (187 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (13).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">ANTHONY MAINA</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 36</p>
+                            <p>Experience: 9Years</p>
+                            <p>Driver Type: Corporate</p>
+                            <p>Contact: 0731 678</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.6 (412 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (14).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">CAROLINE CHEBET</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 29</p>
+                            <p>Experience: 4Years</p>
+                            <p>Driver Type: Personal</p>
+                            <p>Contact: 0776 890</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.7 (156 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (15).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">DANIEL OCHIENG</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 32</p>
+                            <p>Experience: 6Years</p>
+                            <p>Driver Type: Online</p>
+                            <p>Contact: 0712 345</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.8 (289 reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <img src="img/Drivers/images (16).jpeg" alt="Driver" class="driver-avatar">
+                    <div class="driver-info">
+                        <div class="driver-header">
+                            <span class="driver-name">REBECCA WANJALA</span>
+                            <span class="verified-icon">✓</span>
+                        </div>
+                        <div class="driver-details">
+                            <p>Age: 28</p>
+                            <p>Experience: 2Years</p>
+                            <p>Driver Type: Corporate</p>
+                            <p>Contact: 0794 123</p>
+                        </div>
+                        <div class="other-thing-box">Any other thing</div>
+                        <div class="driver-rating">Rating: ⭐ 4.5 (134 reviews)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="next-page" onclick="showPage(2)">NEXT PAGE</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+        let currentPage = 1;
+        
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.driver-profile');
+            slides[currentSlide].classList.remove('active');
+            
+            currentSlide += direction;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            
+            slides[currentSlide].classList.add('active');
+        }
+        
+        function showPage(page) {
+            const page1 = document.querySelector('.drivers-grid:not(.page-2)');
+            const page2 = document.querySelector('.drivers-grid.page-2');
+            const nextBtn = document.querySelector('.next-page');
+            
+            if (page === 1) {
+                page1.style.display = 'grid';
+                page2.style.display = 'none';
+                nextBtn.textContent = 'NEXT PAGE';
+                nextBtn.onclick = () => showPage(2);
+                currentPage = 1;
+            } else {
+                page1.style.display = 'none';
+                page2.style.display = 'grid';
+                nextBtn.textContent = 'PREVIOUS PAGE';
+                nextBtn.onclick = () => showPage(1);
+                currentPage = 2;
+            }
+        }
+    </script>
+</body>
+</html>
