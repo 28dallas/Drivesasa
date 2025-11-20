@@ -10,7 +10,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="img/logo n-02.png" alt="DriveSasa Logo">
+                <img src="img/Dlogo2.png" alt="DriveSasa Logo">
                 <span class="logo-text">DRIVE<span class="sasa">SASA</span></span>
             </div>
             <ul class="nav-menu">
@@ -27,8 +27,8 @@
                 <li><a href="#">Contact us</a></li>
             </ul>
             <div class="auth-buttons">
-                <button class="sign-in">Sign In</button>
-                <button class="sign-up">Sign Up</button>
+                <button class="sign-in" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="sign-up" onclick="window.location.href='signup.html'">Sign Up</button>
             </div>
         </nav>
     </header>
@@ -36,7 +36,7 @@
     <main class="hero-section">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Connect With Trusted Drivers<br>& Reliable Cars</h1>
+                <h1>Connect With Trusted Drivers & Reliable Cars</h1>
                 <p class="hero-subtitle">Reliable Drivers. Trusted Cars<br>Simple Solutions</p>
             </div>
             <div class="hero-image">
@@ -52,7 +52,7 @@
                 Car
             </button>
             <button class="tab" onclick="selectVehicle('motorcycle')">
-                <img src="img/CYCLE2.png" alt="Motorcycle" width="24" height="24" class="motorcycle-icon">
+                <img src="img/CYCLE2.png" alt="Motorcycle" width="40" height="40" class="motorcycle-icon">
                 Motorcycle
             </button>
         </div>
@@ -61,8 +61,8 @@
             <div class="search-form">
                 <div class="dropdown">
                     <select id="serviceSelect">
-                        <option>Looking for?</option>
-                        <option>Driver</option>
+                        <option>Driver</option> 
+                        <option>Car Driver</option>
                         <option>Car Partner</option>
                         <option>Car Hire</option>
                     </select>
@@ -86,7 +86,7 @@
             <p>Reliable Drivers • Trusted Cars • Simple Solutions</p>
         </div>
         <div class="download-logo">
-            <img src="img/logo n-02.png" alt="DriveSasa Logo">
+            <img src="img/Dlogo2.png" alt="DriveSasa Logo">
             <span class="logo-text">DRIVE<span class="sasa">SASA</span></span>
         </div>
     </section>
@@ -101,15 +101,15 @@
             
             if (type === 'car') {
                 serviceSelect.innerHTML = `
-                    <option>Looking for?</option>
+                    
                     <option>Driver</option>
                     <option>Car Partner</option>
                     <option>Car Hire</option>
                 `;
             } else {
                 serviceSelect.innerHTML = `
-                    <option>Looking for?</option>
-                    <option>Motorcycle Driver</option>
+                    <option>Rider</option>
+                    <option>Motorcycle Rider</option>
                     <option>Motorcycle Partner</option>
                     <option>Motorcycle Hire</option>
                 `;

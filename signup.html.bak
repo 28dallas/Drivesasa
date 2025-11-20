@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DriveSasa - Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo2.png" alt="DriveSasa Logo">
+                <span class="logo-text">DRIVE<span class="sasa">SASA</span></span>
+            </div>
+            <div class="auth-buttons">
+                <button class="sign-in" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="sign-up" onclick="window.location.href='signup.html'">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="signup-container">
+                <h2>Create an account</h2>
+                <form id="signup-form" novalidate>
+                    <label for="signup-name" class="sr-only">Full name</label>
+                    <input id="signup-name" name="name" type="text" placeholder="Full name" required>
+                    <label for="signup-email" class="sr-only">Email</label>
+                    <input id="signup-email" name="email" type="email" placeholder="Email" required>
+                    <label for="signup-password" class="sr-only">Password</label>
+                    <input id="signup-password" name="password" type="password" placeholder="Password (min 8 chars)" required>
+                    <label for="signup-password-confirm" class="sr-only">Confirm password</label>
+                    <input id="signup-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div id="signup-message" class="message" role="status" aria-live="polite"></div>
+                <p>Already have an account? <a href="signin.html">Sign In</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

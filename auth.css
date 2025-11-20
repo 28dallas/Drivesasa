@@ -1,0 +1,96 @@
+.verification-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(30,40,60,0.04);
+}
+.verification-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+.verification-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.verification-row label {
+  min-width: 160px;
+  font-weight: 500;
+  color: #333;
+}
+.verification-row input[type="file"] {
+  flex: 1;
+}
+/* auth.css - styles only for signin / signup pages (kept separate so homepage isn't affected) */
+body.auth-page {
+  font-family: system-ui, Arial, sans-serif;
+  background: #f6f8fb;
+  color: #222;
+}
+
+.auth-wrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(30,40,60,0.06);
+}
+
+.auth-card h2 { margin-bottom: 0.5rem; font-size: 1.5rem; color: #111; }
+
+.auth-card form { margin-top: 0.5rem; }
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.auth-card button[type="submit"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  background: #0b78e3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-card button[type="submit"]:hover { background: #095fb5; }
+
+.message { min-height: 1.2em; margin-top: 8px; color: #333; }
+.message.error { color: #b00020; }
+.message.success { color: #0a7a2b; }
+
+.sr-only { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* ensure header looks consistent on auth pages */
+.auth-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255,255,255,0.1);
+}
+
+.auth-page .logo img { height: 36px; }
+

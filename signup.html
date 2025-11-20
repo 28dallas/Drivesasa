@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DriveSasa - Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/Dlogo2.png" alt="DriveSasa Logo">
+                <span class="logo-text">DRIVE<span class="sasa">SASA</span></span>
+            </div>
+            <div class="auth-buttons">
+                <button class="sign-in" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="sign-up" onclick="window.location.href='signup.html'">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="auth-wrapper">
+                <div class="auth-card signup-container">
+                    <h2>Sign Up</h2>
+
+                    <div style="display:flex; gap:8px; margin-bottom:12px;">
+                        <button type="button" id="tab-driver" class="tab active">As a Driver</button>
+                        <button type="button" id="tab-partner" class="tab">Car Partners</button>
+                    </div>
+
+                    <form id="signup-form" novalidate>
+                        <input type="hidden" id="account-type" name="accountType" value="driver">
+
+                        <fieldset style="border:1px solid #e6e6e6; padding:12px; border-radius:8px; margin-bottom:12px;">
+                            <legend><strong>Account Login Information</strong></legend>
+                            <div style="display:flex; gap:12px;">
+                                <div style="flex:1">
+                                    <label for="signup-password" class="sr-only">Create Password</label>
+                                    <input id="signup-password" name="password" type="password" placeholder="Create Password" required>
+                                </div>
+                                <div style="flex:1">
+                                    <label for="signup-password-confirm" class="sr-only">Confirm Password</label>
+                                    <input id="signup-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password" required>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div id="driver-fields">
+                            <fieldset style="border:1px solid #e6e6e6; padding:12px; border-radius:8px; margin-bottom:12px;">
+                                <legend><strong>Driver Details</strong></legend>
+                                <label for="signup-name" class="sr-only">Full name</label>
+                                <input id="signup-name" name="name" type="text" placeholder="Full name" required>
+                                <div style="display:flex; gap:8px;">
+                                    <input id="driver-age" name="age" type="text" placeholder="Age" style="flex:1">
+                                    <input id="driver-experience" name="experience" type="text" placeholder="Experience (years)" style="flex:1">
+                                </div>
+                                <input id="driver-type" name="driverType" type="text" placeholder="Driver Type (Corporate, Personal, Online)">
+                                <input id="service-record" name="serviceRecord" type="text" placeholder="Service Record (trips completed)">
+                                <input id="driver-phone" name="phone" type="text" placeholder="Phone Number">
+                                <input id="preferred-areas" name="preferredAreas" type="text" placeholder="Preferred Areas (comma separated)">
+                                <textarea id="additional-info" name="additionalInfo" placeholder="Additional Information" rows="3" style="width:100%;"></textarea>
+                            </fieldset>
+                            <div class="verification-card">
+                                <h4 style="color:#f44336; margin-bottom:8px;">Verification Details <span style="font-size:0.95em;color:#888;">(max 5 files per field)</span></h4>
+                                <div class="verification-row">
+                                    <label for="id-file">National ID / Passport</label>
+                                    <input id="id-file" name="idFile" type="file" accept="image/*,.pdf" multiple>
+                                </div>
+                                <div class="verification-row">
+                                    <label for="license-file">Driver License</label>
+                                    <input id="license-file" name="licenseFile" type="file" accept="image/*,.pdf" multiple>
+                                </div>
+                                <div class="verification-row">
+                                    <label for="goodconduct-file">Good Conduct Certificate</label>
+                                    <input id="goodconduct-file" name="goodConductFile" type="file" accept="image/*,.pdf" multiple>
+                                </div>
+                                <div class="verification-row">
+                                    <label for="passport-photo">Passport Photo</label>
+                                    <input id="passport-photo" name="passportPhoto" type="file" accept="image/*" multiple>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="partner-fields" style="display:none;">
+                            <fieldset style="border:1px solid #e6e6e6; padding:12px; border-radius:8px; margin-bottom:12px;">
+                                <legend><strong>Car Partners</strong></legend>
+                                <label for="partner-name" class="sr-only">Full name</label>
+                                <input id="partner-name" name="name" type="text" placeholder="Full name" required>
+                                <input id="partner-platforms" name="platforms" type="text" placeholder="Platforms (Corporate, Personal, Online)">
+                                <input id="partner-phone" name="phone" type="text" placeholder="Phone Number">
+                                <input id="vehicle-type" name="vehicleType" type="text" placeholder="Vehicle Type">
+                                <input id="model-year" name="modelYear" type="text" placeholder="Model & Year">
+                                <input id="car-condition" name="carCondition" type="text" placeholder="Car Condition">
+                                <input id="insurance-status" name="insuranceStatus" type="text" placeholder="Insurance & Inspection Status">
+                                <input id="partner-preferred-areas" name="preferredAreas" type="text" placeholder="Preferred Areas (comma separated)">
+                            </fieldset>
+                            <div class="verification-card">
+                                <h4 style="color:#f44336; margin-bottom:8px;">Verification Details <span style="font-size:0.95em;color:#888;">(max 5 files per field)</span></h4>
+                                <div class="verification-row">
+                                    <label for="partner-id-file">National ID / Passport</label>
+                                    <input id="partner-id-file" name="idFile" type="file" accept="image/*,.pdf" multiple>
+                                </div>
+                                <div class="verification-row">
+                                    <label for="car-pictures">Car Pictures</label>
+                                    <input id="car-pictures" name="carPictures" type="file" accept="image/*" multiple>
+                                </div>
+                                <div class="verification-row">
+                                    <label for="partner-passport-photo">Passport Photo</label>
+                                    <input id="partner-passport-photo" name="passportPhoto" type="file" accept="image/*" multiple>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:12px;">
+                            <label for="signup-email" class="sr-only">Email</label>
+                            <input id="signup-email" name="email" type="email" placeholder="Email" required>
+                        </div>
+
+                        <button type="submit" style="margin-top:12px;">Sign Up</button>
+                    </form>
+                    <div id="signup-message" class="message" role="status" aria-live="polite"></div>
+                    <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <script src="js/auth.js"></script>
+        <script>
+        // Enforce max 5 files per upload field
+        function enforceFileLimit(inputId) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            input.addEventListener('change', function(e) {
+                if (this.files.length > 5) {
+                    alert('You can only select up to 5 files.');
+                    this.value = '';
+                }
+            });
+        }
+        [
+            'id-file', 'license-file', 'goodconduct-file', 'passport-photo',
+            'partner-id-file', 'car-pictures', 'partner-passport-photo'
+        ].forEach(enforceFileLimit);
+        </script>
+    <script>
+        // simple tab switching for signup (driver vs car partner)
+        const tabDriver = document.getElementById('tab-driver');
+        const tabPartner = document.getElementById('tab-partner');
+        const accountTypeInput = document.getElementById('account-type');
+
+        function setTab(type){
+            if(type === 'driver'){
+                tabDriver.classList.add('active');
+                tabPartner.classList.remove('active');
+                accountTypeInput.value = 'driver';
+                document.getElementById('driver-fields').style.display = '';
+                document.getElementById('partner-fields').style.display = 'none';
+            } else {
+                tabPartner.classList.add('active');
+                tabDriver.classList.remove('active');
+                accountTypeInput.value = 'partner';
+                document.getElementById('driver-fields').style.display = 'none';
+                document.getElementById('partner-fields').style.display = '';
+            }
+        }
+
+        tabDriver.addEventListener('click', ()=> setTab('driver'));
+        tabPartner.addEventListener('click', ()=> setTab('partner'));
+    </script>
+</body>
+</html>

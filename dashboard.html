@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DriveSasa - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+        <img src="img/logo2.png" alt="DriveSasa Logo">
+        <span class="logo-text">DRIVE<span class="sasa">SASA</span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="drivers.html">Driver</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button id="signout-btn" class="sign-in">Sign Out</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-content">
+      <div class="auth-wrapper">
+        <div class="auth-card">
+          <h2>Your Dashboard</h2>
+          <div id="user-info">
+            <p>Loading user...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function getCurrentUser(){
+      try{ return JSON.parse(localStorage.getItem('ds_currentUser')||'null'); }catch(e){return null;}
+    }
+
+    function render(){
+      const info = document.getElementById('user-info');
+      const user = getCurrentUser();
+      if(!user){
+        info.innerHTML = '<p>You are not signed in. <a href="signin.html">Sign In</a></p>';
+        return;
+      }
+
+      const profile = user.profile || {};
+      const files = user.verificationFiles || {};
+
+      let detailsHtml = '';
+      if (user.accountType === 'driver') {
+        detailsHtml = `
+          <h3>Driver Details</h3>
+          <p><strong>Age:</strong> ${profile.age || ''}</p>
+          <p><strong>Experience:</strong> ${profile.experience || ''}</p>
+          <p><strong>Driver Type:</strong> ${profile.driverType || ''}</p>
+          <p><strong>Service Record:</strong> ${profile.serviceRecord || ''}</p>
+          <p><strong>Phone:</strong> ${profile.phone || ''}</p>
+          <p><strong>Preferred Areas:</strong> ${profile.preferredAreas || ''}</p>
+          <p><strong>Additional Info:</strong> ${profile.additionalInfo || ''}</p>
+          <hr>
+          <div class="verification-card">
+            <h4 style="color:#f44336; margin-bottom:8px;">Verification Details</h4>
+            <div class="verification-row"><label>ID/Passport:</label><span>${files.idFile || 'Not provided'}</span></div>
+            <div class="verification-row"><label>License:</label><span>${files.licenseFile || 'Not provided'}</span></div>
+            <div class="verification-row"><label>Good Conduct:</label><span>${files.goodConductFile || 'Not provided'}</span></div>
+            <div class="verification-row"><label>Passport Photo:</label><span>${files.passportPhoto || 'Not provided'}</span></div>
+          </div>
+        `;
+      } else {
+        detailsHtml = `
+          <h3>Car Partner Details</h3>
+          <p><strong>Name:</strong> ${profile.name || ''}</p>
+          <p><strong>Platforms:</strong> ${profile.platforms || ''}</p>
+          <p><strong>Phone:</strong> ${profile.phone || ''}</p>
+          <p><strong>Vehicle Type:</strong> ${profile.vehicleType || ''}</p>
+          <p><strong>Model & Year:</strong> ${profile.modelYear || ''}</p>
+          <p><strong>Car Condition:</strong> ${profile.carCondition || ''}</p>
+          <p><strong>Insurance & Inspection Status:</strong> ${profile.insuranceStatus || ''}</p>
+          <p><strong>Preferred Areas:</strong> ${profile.preferredAreas || ''}</p>
+          <hr>
+          <div class="verification-card">
+            <h4 style="color:#f44336; margin-bottom:8px;">Verification Details</h4>
+            <div class="verification-row"><label>ID/Passport:</label><span>${files.idFile || 'Not provided'}</span></div>
+            <div class="verification-row"><label>Car Pictures:</label><span>${files.carPictures || 'Not provided'}</span></div>
+            <div class="verification-row"><label>Passport Photo:</label><span>${files.passportPhoto || 'Not provided'}</span></div>
+          </div>
+        `;
+      }
+      info.innerHTML = `
+        <p><strong>Name:</strong> ${user.name || ''}</p>
+        <p><strong>Email:</strong> ${user.email || ''}</p>
+        <hr>
+        ${detailsHtml}
+      `;
+    }
+
+    document.getElementById('signout-btn').addEventListener('click', ()=>{
+      localStorage.removeItem('ds_currentUser');
+      window.location.href = 'index.html';
+    });
+
+    render();
+  </script>
+</body>
+</html>
