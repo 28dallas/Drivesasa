@@ -155,6 +155,10 @@ body {
     border-bottom-color: #333;
 }
 
+.motorcycle-icon {
+    margin-left: -8px;
+}
+
 .search-section {
     display: flex;
     justify-content: center;
@@ -222,7 +226,7 @@ body {
 }
 
 .download-section {
-    background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+    background: white;
     padding: 2rem 3rem;
     margin: 2rem auto;
     display: flex;
@@ -232,6 +236,7 @@ body {
     max-width: 90%;
     width: 100%;
     box-sizing: border-box;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .download-content h2 {
